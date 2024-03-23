@@ -1,0 +1,1 @@
+Libraries used in React project with installation commands:
