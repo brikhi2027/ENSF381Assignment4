@@ -1,9 +1,4 @@
 import React from 'react';
-//import {BrowserRouter, Routes, Route} from 'react-router-dom';
-//import Home from './Home';
-//import Products from './Products';
-//import Login from './Login';
-//import companyLogo from '../../../public/images/logo.png';
 
 const styles = {
     container: {
