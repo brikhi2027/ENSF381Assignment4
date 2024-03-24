@@ -28,11 +28,15 @@ const HomeMainSection = () => {
             <button onClick = {handleButtonClick}>Shop Now</button>
             <h2>Customer Reviews</h2>
             {review.map(function(review) {
+                var ratingStars = []
+                for (let i = 0; i < review.stars; i++){
+                    ratingStars.push('★');
+                }
                 return(
                     <div>
                         <p>{review.customerName}</p>
                         <p>{review.reviewContent}</p>
-                        <p>Rating: {review.stars} </p>
+                        <p>Rating: {ratingStars}</p>
                     </div>
                 );
             })}
