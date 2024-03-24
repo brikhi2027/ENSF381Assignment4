@@ -40,7 +40,7 @@ const HomeMainSection = () => {
                     </div>
                 );
             })}
-
+            <br></br>
         </div>  
     );
 };
