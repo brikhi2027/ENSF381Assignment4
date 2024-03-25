@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = (props) => {
+const CartItem = (product) => {
     
 
     //function handleRemoveFromCartButtonClick(event){
@@ -12,11 +12,11 @@ const CartItem = (props) => {
     
     return(
         <div>
-           <img src = {props.item.image} alt = {props.item.name}></img>
-           <p>{props.item.name}</p>
-           <p>Price: ${props.item.price}</p>
-           <p>Quantity: {props.item.count}</p>
-           <p>Total: ${props.item.total}</p>
+           <img src = {product.image} alt = {product.name}></img>
+           <p>{product.name}</p>
+           <p>Price: ${product.price}</p>
+           <p>Quantity: {}</p>
+           <p>Total: ${}</p>
            {/*<button onClick = {handleRemoveFromCartButtonClick}>Remove</button>*/}
         </div>
     );

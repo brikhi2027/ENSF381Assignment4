@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import Cart from './Cart';
 
 const ProductItem = (product) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
@@ -16,6 +16,7 @@ const ProductItem = (product) => {
     }
 
     const handleAddToCartButtonClick = (product) => {
+        Cart(product);
         setCartItems([...cartItems, product]);
         setTotalPrice(totalPrice + product.price);
         setCount(count + 1);
