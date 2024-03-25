@@ -4,6 +4,14 @@ import productsData from '../data/products.js';
 
 
 const ProductList = () => {
+    const [product, setProduct] = useState({
+        id: '',
+        name: '',
+        description: '',
+        price: '',
+        image: '',
+
+    });
     return(
         {productsData.map(function(item) {
             return(
