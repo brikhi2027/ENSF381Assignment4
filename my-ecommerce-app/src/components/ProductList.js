@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductItem from './ProductItem';
 import productsData from '../data/products.js';
 
@@ -13,12 +13,13 @@ const ProductList = () => {
 
     });
     return(
+        <div>
         {productsData.map(function(item) {
             return(
                 <ProductItem product = {item} />
             );
         })}
-
+    </div>
     );
 };
 

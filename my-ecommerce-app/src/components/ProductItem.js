@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 
 const ProductItem = (product) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
+    const [count, setCount] = useState(0);
+    const [cartItems, setCartItems] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const handleShowDetails = () => {
         setShowProductDescription(true);
@@ -12,19 +15,21 @@ const ProductItem = (product) => {
         setShowProductDescription(false);
     }
 
-    //function handleAddToCartButtonClick(){
-        //add code to handle the add to cart button click
-    //}
+    const handleAddToCartButtonClick = (product) => {
+        setCartItems([...cartItems, product]);
+        setTotalPrice(totalPrice + product.price);
+        setCount(count + 1);
+    }
 
     return(
-        <div>
+        <div id={product.id}>
            <img src = {product.image} alt = {product.name}></img>
            <div onMouseEnter = {handleShowDetails} onMouseLeave = {handleHideDetails}>
                 <p>{product.name}</p>
                 {showProductDescription && <p>{product.description}</p>}
            </div>
            <p>Price: {product.price}</p>
-           {/*<button onClick = {handleAddToCartButtonClick}>Add to Cart</button>*/}
+           {<button onClick = {handleAddToCartButtonClick}>Add to Cart</button>}
 
         </div>
     );
