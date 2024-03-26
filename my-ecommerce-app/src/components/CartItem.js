@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductItem from './ProductItem';
 
-const CartItem = (product) => {
     
 
 const CartItem = ({product, removeFromCart}) => {
