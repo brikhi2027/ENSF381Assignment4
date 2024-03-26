@@ -24,10 +24,17 @@ const ProductItem = ({product, addToCart}) => {
 
     const handleAddToCartButtonClick = (product) => {
         Cart(product);
-        Cart(product);
-        setCartItems([...cartItems, product]);
-        setTotalPrice(totalPrice + product.price);
-        setCount(count + 1);
+        const isInCart = cartItems.findIndex(item => item.id === product.id);
+
+        if (isInCart !== -1){
+            const newCart = [...cartItems]
+            newCart[isInCart].quantity += 1;
+            newCart[isInCart].total += product.price;
+            setCartItems(newCart);
+        }
+        else{
+            setCartItems([...cartItems, {...product, quantity: 1, total: product.price }]);
+        }
     }
 
     return(
