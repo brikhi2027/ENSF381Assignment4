@@ -17,7 +17,7 @@ const HomeMainSection = () => {
 
 
     function handleButtonClick(){
-        navigate('/Productpage');
+        navigate('/Products');
     }
 
     return(

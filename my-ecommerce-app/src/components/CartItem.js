@@ -12,11 +12,10 @@ const CartItem = ({product, removeFromCart}) => {
         //}
     //};
 
-    //const handleRemoveFromCartButtonClick = (product) => {
-        //removeFromCart(product);
+    const handleRemoveFromCartButtonClick = (product) => {
         //setTotalPrice(totalPrice - product.price);
         //setCount(count - 1);
-    //}
+    };
     
     return(
         <div>
@@ -25,7 +24,7 @@ const CartItem = ({product, removeFromCart}) => {
            <p>Price: ${product.price}</p>
            <p>Quantity: {}</p>
            <p>Total: ${}</p>
-           {/*<button onClick = {handleRemoveFromCartButtonClick}>Remove</button>*/}
+           <button onClick = {handleRemoveFromCartButtonClick}>Remove</button>
         </div>
     );
 };

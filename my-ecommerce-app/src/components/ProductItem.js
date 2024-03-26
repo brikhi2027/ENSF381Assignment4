@@ -10,9 +10,9 @@ const productStyles = {
 
 const ProductItem = ({product, addToCart}) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
-    const [count, setCount] = useState(0);
+    //const [count, setCount] = useState(0);
     const [cartItems, setCartItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
+    //const [totalPrice, setTotalPrice] = useState(0);
 
     const handleShowDetails = () => {
         setShowProductDescription(true);
@@ -23,6 +23,7 @@ const ProductItem = ({product, addToCart}) => {
     }
 
     const handleAddToCartButtonClick = (product) => {
+        addToCart(product);
         const isInCart = cartItems.findIndex(item => item.id === product.id);
 
         if (isInCart !== -1){
@@ -34,7 +35,7 @@ const ProductItem = ({product, addToCart}) => {
         else{
             setCartItems([...cartItems, {...product, quantity: 1, total: product.price }]);
         }
-    }
+    };
 
     return(
         <div id={product.id}>
