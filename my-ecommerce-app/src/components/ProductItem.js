@@ -44,7 +44,7 @@ const ProductItem = ({product, addToCart}) => {
                 <p>{product.name}</p>
                 {showProductDescription && <p>{product.description}</p>}
            </div>
-           <p>Price: {product.price}</p>
+           <p>Price: ${product.price}</p>
            <button onClick = {handleAddToCartButtonClick}>Add to Cart</button>
 
         </div>
