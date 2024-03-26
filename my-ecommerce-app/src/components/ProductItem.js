@@ -10,9 +10,8 @@ const productStyles = {
 
 const ProductItem = ({product, addToCart}) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
-    //const [count, setCount] = useState(0);
+    
     const [cartItems, setCartItems] = useState([]);
-    //const [totalPrice, setTotalPrice] = useState(0);
 
     const handleShowDetails = () => {
         setShowProductDescription(true);
