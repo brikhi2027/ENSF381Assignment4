@@ -6,7 +6,7 @@ const productStyles = {
         width: '200px',
         height: 'auto',
     },
-}
+};
 
 const ProductItem = ({product, addToCart}) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
