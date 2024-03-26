@@ -14,11 +14,11 @@ const Productpage = () => {
         //if(currentCart){
             //setCartItems(JSON.parse(currentCart));
         //}
-    //}, []); // this will only run on mount
+    //}, []); // this should only run on mount
 
     //useEffect(() => {
         //localStorage.setItem('cartItems', JSON.stringify(cartItems))
-    //}, [cartItems]); // this will run whenever the array of cart items changes
+    //}, [cartItems]); // this should run whenever the array of cart items changes
 
     return(
         <div className = "product-page">
