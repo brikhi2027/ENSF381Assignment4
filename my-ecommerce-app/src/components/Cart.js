@@ -4,8 +4,7 @@ import CartItem from './CartItem.js';
 
 
 const Cart = (cartItem) => {
-    const cartList = [];
-    const [list, setList] = React.useState(cartList);
+    const [list, setList] = useState([]);
     
     function addToList(){
         const newList = list.concat({ cartItem });
@@ -19,7 +18,6 @@ const Cart = (cartItem) => {
         return totalPrice;
     }
 
-    addToList();
     let totalPrice = calculateCartTotal();
     return(
         <div>
