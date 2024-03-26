@@ -6,7 +6,7 @@ const productStyles = {
         width: '200px',
         height: 'auto',
     },
-}
+}import Cart from './Cart';
 
 const ProductItem = ({product, addToCart}) => {
     const [showProductDescription, setShowProductDescription] = useState(false);
@@ -23,6 +23,7 @@ const ProductItem = ({product, addToCart}) => {
     }
 
     const handleAddToCartButtonClick = (product) => {
+        Cart(product);
         Cart(product);
         setCartItems([...cartItems, product]);
         setTotalPrice(totalPrice + product.price);
