@@ -20,9 +20,7 @@ const CartItem = ({product, removeFromCart}) => {
     
     return(
         <div>
-            <ProductItem product = {product} />
-            {/*<button onClick = {handleRemoveFromCartButtonClick}>Remove</button>*/}
-           {/*<img src = {product.image} alt = {product.name}></img>
+           <img src = {product.image} alt = {product.name}></img>
            <p>{product.name}</p>
            <p>Price: ${product.price}</p>
            <p>Quantity: {}</p>

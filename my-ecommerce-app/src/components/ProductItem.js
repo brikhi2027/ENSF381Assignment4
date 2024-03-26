@@ -23,7 +23,6 @@ const ProductItem = ({product, addToCart}) => {
     }
 
     const handleAddToCartButtonClick = (product) => {
-        Cart(product);
         const isInCart = cartItems.findIndex(item => item.id === product.id);
 
         if (isInCart !== -1){
